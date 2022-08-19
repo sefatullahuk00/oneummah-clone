@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>One Ummahbd</title>
+    <!-- Bootstrap Css -->
+    <!-- <link rel="stylesheet" href="./css/bootstrap.min.css" /> -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <!-- Swipper -- CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+    <!-- Custom Css -->
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <!-- Font--Awesome CDN -->
+    <script src="https://kit.fontawesome.com/fee777bd9c.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <section>
+    <!-- Sticky Top Bar - fixed top on scroll -->
+    <div class="sticky_nav py-3" id="sticky_nav">
+      <div class="container">
+        <div class="row justify-content-between">
+          <!-- Search Box -->
+          <div class="col-4" id="nav-search">
+            <form action="" class="d-flex justify-content-start align-items-center">
+              <a class="navbar-toggler d-md-none" data-bs-target="#offcanvas_nav" data-bs-toggle="offcanvas">
+                <i class="fa-solid fa-bars"></i>
+              </a>
+
+              <input type="text" class="form-control rounded-pill px-2 py-1 fs-6" id="nav-search-input" placeholder="Search..."/>
+              <i class="fa-solid fa-magnifying-glass d-md-none nav_search_icon"></i>
+            </form>
+          </div>
+          <!-- Main Logo One Ummah -->
+          <div class="col-3">
+            <a class="d-flex align-items-center" href="#">
+              <img class="align-self-center navbar-brand mx-auto d-block img-fluid shop_logo" src="./img/main-logo.png" alt=""/></a>
+          </div>
+          <!-- Login/Register--- wishlist ---- cart -->
+          <div class="col-5 d-flex justify-content-end signup_nd_icons">
+            <!-- Login/Register -->
+            <a class="btn btn-outline-dark rounded-pill px-3 py-1 Log_Reg_btn align-self-center" href="#" data-bs-target="#login_reg_modal" data-bs-toggle="modal">Login/Register</a>
+            <!--login/register alternate screen < 768px -->
+            <button class="d-md-none">
+              <i class="fa-solid fa-user" data-bs-target="#login_reg_modal" data-bs-toggle="modal"></i>
+            </button>
+            <!-- Wishlist -->
+            <button class="wishlist_icon">
+              <i class="fa-solid fa-heart"></i>
+            </button>
+            <!-- Cart -->
+            <button class="shop_cart">
+              <i class="fa-solid fa-cart-shopping"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navigation Items -->
+    <nav class="navbar navbar-expand-md bg-dark p-0">
+      <div class="container">
+        <div
+          class="offcanvas offcanvas-start bg-light"
+          tabindex="-1"
+          id="offcanvas_nav"
+          aria-labelledby="offcanvasExampleLabel"
+        >
+          <!-- offcanvas header -->
+          <div class="offcanvas-header">
+            <h5 class="invisible offcanvas-title fw-bold fs-2 text-white" id="offcanvasExampleLabel"> Logo</h5>
+            <button
+              type="button"
+              class="btn-close text-reset bg-light"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <!-- offcanvas body -->
+          <div class="offcanvas-body">
+            <ul class="navbar-nav m-auto nav_menus">
+              <li class="nav-item py-2 py-md-2">
+                <a class="nav-link px-3 text-white nav_active" href="#">HOME</a>
+              </li>
+              <!--Man's item dropdown Menu -->
+              <li class="nav-item dropdown py-2 pb-0">
+                <a class="nav-link dropdown-toggle px-3 text-white" href="#" data-bs-toggle="dropdown" role="button">MAN'S</a>
+
+                <ul class="dropdown-menu man_submenu">
+                  <div class="d-md-flex">
+                    <div>
+                      <li class="px-2 px-md-0">
+                        <h6 class="dropdown-header text-dark">
+                          HALF SLEEVE T-SHIRT
+                        </h6>
+                      </li>
+                      <li class="ps-3 ps-md-0">
+                        <a href="a" class="dropdown-item text-secondary">Half Sleeve Dawah T-Shirt</a>
+                      </li>
+                      <li class="ps-3 ps-md-0">
+                        <a href="" class="dropdown-item text-secondary">Half Sleeve Regular T-Shirt</a>
+                      </li>
+                      <li class="ps-3 ps-md-0">
+                        <a href="" class="dropdown-item text-secondary">Half Sleeve Nevin TexT-Shirt</a>
+                      </li>
+                      <li class="ps-3 ps-md-0">
+                        <a href="" class="dropdown-item text-secondary">Half Sleeve Solid T-Shirt</a>
+                      </li>
+                      <li class="ps-3 ps-md-0">
+                        <a href="" class="dropdown-item text-secondary">Half Sleeve Cut and Sew</a>
+                      </li>
+                      <li class="ps-3 ps-md-0 pb-2">
+                        <a href="" class="dropdown-item text-secondary">Polo T-Shirt</a>
+                      </li>
+                    </div>
+
+                    <div>
+                     <li class="px-2 px-md-0 pt-2 pt-md-0">
+                       <h6 class="dropdown-header text-dark">
+                        JOGGERS PANT
+                       </h6>
+                     </li>
+                     <li class="ps-3 ps-md-0">
+                       <a href="" class="dropdown-item text-secondary">Denim Joggers</a>
+                     </li>
+                     <li class="ps-3 ps-md-0">
+                       <a href="" class="dropdown-item text-secondary">Mash Joggers</a>
+                     </li>
+                     <li class="ps-3 ps-md-0">
+                       <a href="" class="dropdown-item text-secondary">HTwill Joggers</a>
+                     </li>
+                   </div>
+                  </div>
+                </ul>
+              </li>
+              <li class="nav-item pt-2 py-md-2 dropdown">
+                <a class="nav-link px-3 text-white dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">KID'S & BOY'S</a>
+                <!-- KID'S & BOY'S dropdown -->
+                <ul class="dropdown-menu py-4 kid_boy_submenu">
+                  <div>
+                    <li class="ps-3 ps-md-0">
+                      <a href="#" class="dropdown-item">Kid's T-shirt</a>
+                    </li>
+                  </div>
+                </ul>
+              </li>
+              <li class="nav-item pt-2 py-md-2 dropdown">
+                <a class="nav-link px-3 text-white text-white dropdown-toggle" href="#" data-bs-toggle="dropdown">SUNNAH ESSENTIAL</a>
+                <!-- SUNNAH ESSENTIAL dropdown -->
+                <ul class="dropdown-menu py-4 kid_boy_submenu">
+                  <div>
+                    <li class="ps-3 ps-md-0">
+                      <a href="#" class="dropdown-item">Perfume</a>
+                    </li>
+                  </div>
+                </ul>
+              </li>
+              <li class="nav-item pt-2 py-md-2 dropdown">
+                <a class="nav-link px-3 text-white text-white dropdown-toggle" href="#" data-bs-toggle="dropdown">MARKETPLACE</a>
+                <!-- MARKETPLACE dropdown -->
+                <ul class="dropdown-menu py-4 kid_boy_submenu">
+                  <div>
+                    <li class="ps-3 ps-md-0">
+                      <a href="#" class="dropdown-item">Half Sleeve T-Shirt</a>
+                    </li>
+                  </div>
+                </ul>
+              </li>
+              <li class="nav-item py-2 py-md-2">
+                <a class="nav-link px-3 text-white" href="#">OTHER BRANDS</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </section>
+
+
+            <!-- ====  Landing Page Slider ====  -->
+
+  <section class="landing_slider mb-5">
+    <div class="swiper swiper_landing_slider">
+      <div class="swiper-wrapper">
+        <!-- Slide 1  -->
+        <div class="swiper-slide landing_slider_img_1 d-flex flex-column">
+          <div class="text-light fw-bold mb-2">SUMMER ARRIVAL</div>
+          <div class="text-light fw-bold mb-3">NEW CUT & SEW T-SHIRTS</div>
+          <a href="#" class="btn btn-outline-light rounded-0 fw-bold slider-btn">
+            VIEW COLLECTION >>
+          </a>
+        </div>
+        <!-- Slide 2  -->
+        <div class="swiper-slide landing_slider_img_2 d-flex flex-column">
+          <div class="text-light fw-bold mb-3">USE FLAT5 TO GET 5% OFF</div>
+          <a href="#" class="btn btn-outline-dark rounded-0 fw-bold slider-btn">
+            SHOP ALL >>
+          </a>
+        </div>
+      </div>
+      <!-- Swipper Navigation  -->
+      <!-- <div class="swiper-button-next d-sm-none"></div> -->
+      <!-- <div class="swiper-button-prev d-sm-none"></div> -->
+      <!-- Swipper Pagination  -->
+      <div class="swiper-pagination"></div>
+    </div>
+  </section>
+    <!-- -----  Landing Page Slider Ends -----  -->
+
+    <!-- -----  Half Sleeve Dawah T-shirt Banner  -----  -->
+    
+    <section class="container my-5">
+      <div class="half_sleeve_dawah_tshirt_banner">
+        <img src="./img/banner img/half-sleeve-dawah-tshirt.png" class="w-100 h-auto" alt="">
+      </div>
+    </section>
+    
+    <!-- -----  Half Sleeve Dawah T-shirt Slider 1 -----  -->
+    <section class="container my-5" id="product_slide_container">
+      <div class="swiper half_sleeve_dawah_tshirt_swiper_1 my-3">
+        <div class="swiper-wrapper">
+
+          <div class="swiper-slide d-flex flex-column">
+            <div class="overflow-hidden">
+              <img src="./img/t-shirts/half-sleeve-dawah-1.jpg" class="img-fluid" alt="">
+            </div>
+            <div class="overflow-hidden">
+              <a href="#" class="product_name_title">Assalamu Alaikum v5</a>
+              <h6 class="product_price_rank">&#2547; 320.00 - &#2547; 490.00</h6>
+            </div>
+          </div>
+
+          <div class="swiper-slide d-flex flex-column">
+            <div class="overflow-hidden">
+              <img src="./img/t-shirts/half-sleeve-dawah-2.jpg" class="img-fluid" alt="">
+            </div>
+            <div>
+              <a href="#" class="product_name_title">Dua</a>
+              <h6 class="product_price_rank">&#2547; 320.00 - &#2547; 490.00</h6>
+            </div>
+          </div>
+
+          <div class="swiper-slide d-flex flex-column">
+            <div class="overflow-hidden">
+              <img src="./img/t-shirts/half-sleeve-dawah-3.jpg" class="img-fluid" alt="">
+            </div>
+            <div>
+              <a href="#" class="product_name_title">People Forgets Allah Forgives</a>
+              <h6 class="product_price_rank">&#2547; 320.00 - &#2547; 490.00</h6>
+            </div>
+          </div>
+
+          <div class="swiper-slide d-flex flex-column">
+            <div class="overflow-hidden">
+              <img src="./img/t-shirts/half-sleeve-dawah-4.jpg" class="img-fluid" alt="">
+            </div>
+            <div>
+              <a href="#" class="product_name_title">Pray Like It's Your Last Day</a>
+              <h6 class="product_price_rank">&#2547; 320.00 - &#2547; 490.00</h6>
+            </div>
+          </div>
+
+          <div class="swiper-slide d-flex flex-column">
+            <div class="overflow-hidden">
+              <img src="./img/t-shirts/half-sleeve-dawah-5.jpg" class="img-fluid" alt="">
+            </div>
+            <div>
+              <a href="#" class="product_name_title">Behind Every Dealy There is Goodness</a>
+              <h6 class="product_price_rank">&#2547; 320.00 - &#2547; 490.00</h6>
+            </div>
+          </div>
+
+          <div class="swiper-slide d-flex flex-column">
+            <div class="overflow-hidden">
+              <img src="./img/t-shirts/half-sleeve-dawah-6.jpg" class="img-fluid" alt="">
+            </div>
+            <div>
+              <a href="#" class="product_name_title">Stop Eating your brothers fish</a>
+              <h6 class="product_price_rank">&#2547; 320.00 - &#2547; 490.00</h6>
+            </div>
+          </div>
+         
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+
+        <!-- -----  Half Sleeve Dawah T-shirt Slider 2 -----  -->
+      <div class=" my-3 swiper half_sleeve_dawah_tshirt_swiper_2">
+        <div class="swiper-wrapper">
+
+          <div class="swiper-slide d-flex flex-column">
+            <div class="overflow-hidden">
+              <img src="./img/t-shirts/half-sleeve-dawah-7.jpg" class="img-fluid" alt="">
+            </div>
+            <div class="overflow-hidden">
+              <a href="#" class="product_name_title">Assalamu Alaikum v5</a>
+              <h6 class="product_price_rank">&#2547; 320.00 - &#2547; 490.00</h6>
+            </div>
+          </div>
+
+          <div class="swiper-slide d-flex flex-column">
+            <div class="overflow-hidden">
+              <img src="./img/t-shirts/half-sleeve-dawah-8.jpg" class="img-fluid" alt="">
+            </div>
+            <div>
+              <a href="#" class="product_name_title">Dua</a>
+              <h6 class="product_price_rank">&#2547; 320.00 - &#2547; 490.00</h6>
+            </div>
+          </div>
+
+          <div class="swiper-slide d-flex flex-column">
+            <div class="overflow-hidden">
+              <img src="./img/t-shirts/half-sleeve-dawah-9.jpg" class="img-fluid" alt="">
+            </div>
+            <div>
+              <a href="#" class="product_name_title">People Forgets Allah Forgives</a>
+              <h6 class="product_price_rank">&#2547; 320.00 - &#2547; 490.00</h6>
+            </div>
+          </div>
+
+          <div class="swiper-slide d-flex flex-column">
+            <div class="overflow-hidden">
+              <img src="./img/t-shirts/half-sleeve-dawah-10.jpg" class="img-fluid" alt="">
+            </div>
+            <div>
+              <a href="#" class="product_name_title">Pray Like It's Your Last Day</a>
+              <h6 class="product_price_rank">&#2547; 320.00 - &#2547; 490.00</h6>
+            </div>
+          </div>
+
+          <div class="swiper-slide d-flex flex-column">
+            <div class="overflow-hidden">
+              <img src="./img/t-shirts/half-sleeve-dawah-11.jpg" class="img-fluid" alt="">
+            </div>
+            <div>
+              <a href="#" class="product_name_title">Behind Every Dealy There is Goodness</a>
+              <h6 class="product_price_rank">&#2547; 320.00 - &#2547; 490.00</h6>
+            </div>
+          </div>
+
+          <div class="swiper-slide d-flex flex-column">
+            <div class="overflow-hidden">
+              <img src="./img/t-shirts/half-sleeve-dawah-12.jpg" class="img-fluid" alt="">
+            </div>
+            <div>
+              <a href="#" class="product_name_title">Stop Eating your brothers fish</a>
+              <h6 class="product_price_rank">&#2547; 320.00 - &#2547; 490.00</h6>
+            </div>
+          </div>
+         
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+    </section>
+
+     <!-- -----  Half Sleeve Regular T-shirt Banner  -----  -->
+    
+     <section class="container my-5">
+      <div class="half_sleeve_dawah_tshirt_banner">
+        <img src="./img/banner img/half-sleeve-regular-tshirt.png" class="w-100 h-auto" alt="">
+      </div>
+    </section>
+
+    <!-- -----  Half Sleeve Regular T-shirt Slider 1 -----  -->
+    <section class="container my-5" id="product_slide_container">
+      <div class="swiper half_sleeve_dawah_tshirt_swiper_1 my-3">
+        <div class="swiper-wrapper">
+
+          <div class="swiper-slide d-flex flex-column">
+            <div class="overflow-hidden">
+              <img src="./img/t-shirts/regular-sajhbela-1.jpg" class="img-fluid" alt="">
+            </div>
+            <div class="overflow-hidden">
+              <a href="#" class="product_name_title">Sajhbela</a>
+              <h6 class="product_price_rank">&#2547; 320.00 - &#2547; 490.00</h6>
+            </div>
+          </div>
+
+          <div class="swiper-slide d-flex flex-column">
+            <div class="overflow-hidden">
+              <img src="./img/t-shirts/regular-scenario-2.jpg" class="img-fluid" alt="">
+            </div>
+            <div>
+              <a href="#" class="product_name_title">Scenario</a>
+              <h6 class="product_price_rank">&#2547; 320.00 - &#2547; 490.00</h6>
+            </div>
+          </div>
+
+          <div class="swiper-slide d-flex flex-column">
+            <div class="overflow-hidden">
+              <img src="./img/t-shirts/regular-the-worst-distance-3.jpg" class="img-fluid" alt="">
+            </div>
+            <div>
+              <a href="#" class="product_name_title">He Worst Distance</a>
+              <h6 class="product_price_rank">&#2547; 320.00 - &#2547; 490.00</h6>
+            </div>
+          </div>
+
+          <div class="swiper-slide d-flex flex-column">
+            <div class="overflow-hidden">
+              <img src="./img/t-shirts/regular-do-hard-or-go-home-4.jpg" class="img-fluid" alt="">
+            </div>
+            <div>
+              <a href="#" class="product_name_title">Do Hard Or Go Home</a>
+              <h6 class="product_price_rank">&#2547; 320.00 - &#2547; 490.00</h6>
+            </div>
+          </div>
+
+          <div class="swiper-slide d-flex flex-column">
+            <div class="overflow-hidden">
+              <img src="./img/t-shirts/regular-one-day-I'm-gonna-make-onions-cry-5.jpg" class="img-fluid" alt="">
+            </div>
+            <div>
+              <a href="#" class="product_name_title">One day I'm gonna make onions cry</a>
+              <h6 class="product_price_rank">&#2547; 320.00 - &#2547; 490.00</h6>
+            </div>
+          </div>
+
+          <div class="swiper-slide d-flex flex-column">
+            <div class="overflow-hidden">
+              <img src="./img/t-shirts/regular-bycicle-v3-6.jpg" class="img-fluid" alt="">
+            </div>
+            <div>
+              <a href="#" class="product_name_title">Bycicle</a>
+              <h6 class="product_price_rank">&#2547; 320.00 - &#2547; 490.00</h6>
+            </div>
+          </div>
+
+          <div class="swiper-slide d-flex flex-column">
+            <div class="overflow-hidden">
+              <img src="./img/t-shirts/regular-travel-more-worry-less-7.jpg" class="img-fluid" alt="">
+            </div>
+            <div>
+              <a href="#" class="product_name_title">Rravel More Worry Less</a>
+              <h6 class="product_price_rank">&#2547; 320.00 - &#2547; 490.00</h6>
+            </div>
+          </div>
+
+          <div class="swiper-slide d-flex flex-column">
+            <div class="overflow-hidden">
+              <img src="./img/t-shirts/regular-stop-rape-8.jpg" class="img-fluid" alt="">
+            </div>
+            <div>
+              <a href="#" class="product_name_title">Stop Rape</a>
+              <h6 class="product_price_rank">&#2547; 320.00 - &#2547; 490.00</h6>
+            </div>
+          </div>
+
+          <div class="swiper-slide d-flex flex-column">
+            <div class="overflow-hidden">
+              <img src="./img/t-shirts/regular-life-is-beautiful-9.jpg" class="img-fluid" alt="">
+            </div>
+            <div>
+              <a href="#" class="product_name_title">Life is Beautiful</a>
+              <h6 class="product_price_rank">&#2547; 320.00 - &#2547; 490.00</h6>
+            </div>
+          </div>
+         
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+
+        <!-- -----  Half Sleeve Regular T-shirt Slider 2 -----  -->
+      <div class=" my-3 swiper half_sleeve_dawah_tshirt_swiper_2">
+        <div class="swiper-wrapper">
+
+          <div class="swiper-slide d-flex flex-column">
+            <div class="overflow-hidden">
+              <img src="./img/t-shirts/regular-freedom-of-speech-10.jpg" class="img-fluid" alt="">
+            </div>
+            <div class="overflow-hidden">
+              <a href="#" class="product_name_title">Freedom of Speech</a>
+              <h6 class="product_price_rank">&#2547; 320.00 - &#2547; 490.00</h6>
+            </div>
+          </div>
+
+          <div class="swiper-slide d-flex flex-column">
+            <div class="overflow-hidden">
+              <img src="./img/t-shirts/regular-decipline-design-11.jpg" class="img-fluid" alt="">
+            </div>
+            <div>
+              <a href="#" class="product_name_title">Decipline Design</a>
+              <h6 class="product_price_rank">&#2547; 320.00 - &#2547; 490.00</h6>
+            </div>
+          </div>
+
+          <div class="swiper-slide d-flex flex-column">
+            <div class="overflow-hidden">
+              <img src="./img/t-shirts/regular-puzzle-12.jpg" class="img-fluid" alt="">
+            </div>
+            <div>
+              <a href="#" class="product_name_title">Puzzle</a>
+              <h6 class="product_price_rank">&#2547; 320.00 - &#2547; 490.00</h6>
+            </div>
+          </div>
+
+          <div class="swiper-slide d-flex flex-column">
+            <div class="overflow-hidden">
+              <img src="./img/t-shirts/regular-life-is-unstoppable-13.jpg" class="img-fluid" alt="">
+            </div>
+            <div>
+              <a href="#" class="product_name_title">Life is Unstoppable</a>
+              <h6 class="product_price_rank">&#2547; 320.00 - &#2547; 490.00</h6>
+            </div>
+          </div>
+
+          <div class="swiper-slide d-flex flex-column">
+            <div class="overflow-hidden">
+              <img src="./img/t-shirts/regular-train-insane-14.jpg" class="img-fluid" alt="">
+            </div>
+            <div>
+              <a href="#" class="product_name_title">Train insane</a>
+              <h6 class="product_price_rank">&#2547; 320.00 - &#2547; 490.00</h6>
+            </div>
+          </div>
+
+          <div class="swiper-slide d-flex flex-column">
+            <div class="overflow-hidden">
+              <img src="./img/t-shirts/regular-success-story-15.jpg" class="img-fluid" alt="">
+            </div>
+            <div>
+              <a href="#" class="product_name_title">Success story</a>
+              <h6 class="product_price_rank">&#2547; 320.00 - &#2547; 490.00</h6>
+            </div>
+          </div>
+
+          <div class="swiper-slide d-flex flex-column">
+            <div class="overflow-hidden">
+              <img src="./img/t-shirts/regular-over-load-16.jpg" class="img-fluid" alt="">
+            </div>
+            <div>
+              <a href="#" class="product_name_title">Over load</a>
+              <h6 class="product_price_rank">&#2547; 320.00 - &#2547; 490.00</h6>
+            </div>
+          </div>
+
+          <div class="swiper-slide d-flex flex-column">
+            <div class="overflow-hidden">
+              <img src="./img/t-shirts/regular-relax-17.jpg" class="img-fluid" alt="">
+            </div>
+            <div>
+              <a href="#" class="product_name_title">Relax</a>
+              <h6 class="product_price_rank">&#2547; 320.00 - &#2547; 490.00</h6>
+            </div>
+          </div>
+         
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+    </section>
+
+    <!-- -----   Polo T-Shirt Banner  -----  -->
+    
+    <section class="container my-5">
+      <div class="half_sleeve_dawah_tshirt_banner">
+        <img src="./img/banner img/polo-tshirt.png" class="w-100 h-auto" alt="">
+      </div>
+    </section>
+
+       <!-- -----  Polo T-Shirt  Slider  -----  -->
+    <section class="container my-5" id="product_slide_container">
+      <div class="swiper half_sleeve_dawah_tshirt_swiper_1 my-3">
+        <div class="swiper-wrapper">
+
+          <div class="swiper-slide d-flex flex-column">
+            <div class="overflow-hidden">
+              <img src="./img/t-shirts/polo-1.jpg" class="img-fluid" alt="">
+            </div>
+            <div class="overflow-hidden">
+              <a href="#" class="product_name_title">Polo T-Shirt Black</a>
+              <h6 class="product_price_rank">&#2547; 320.00 - &#2547; 490.00</h6>
+            </div>
+          </div>
+
+          <div class="swiper-slide d-flex flex-column">
+            <div class="overflow-hidden">
+              <img src="./img/t-shirts/polo-2.jpg" class="img-fluid" alt="">
+            </div>
+            <div>
+              <a href="#" class="product_name_title">Polo T-Shirt Navy</a>
+              <h6 class="product_price_rank">&#2547; 320.00 - &#2547; 490.00</h6>
+            </div>
+          </div>
+
+          <div class="swiper-slide d-flex flex-column">
+            <div class="overflow-hidden">
+              <img src="./img/t-shirts/polo-3.jpg" class="img-fluid" alt="">
+            </div>
+            <div>
+              <a href="#" class="product_name_title">Polo T-Shirt Rust</a>
+              <h6 class="product_price_rank">&#2547; 320.00 - &#2547; 490.00</h6>
+            </div>
+          </div>
+
+          <div class="swiper-slide d-flex flex-column">
+            <div class="overflow-hidden">
+              <img src="./img/t-shirts/polo-4.jpg" class="img-fluid" alt="">
+            </div>
+            <div>
+              <a href="#" class="product_name_title">Polo T-Shirt Turkish Blue</a>
+              <h6 class="product_price_rank">&#2547; 320.00 - &#2547; 490.00</h6>
+            </div>
+          </div>
+
+          <div class="swiper-slide d-flex flex-column">
+            <div class="overflow-hidden">
+              <img src="./img/t-shirts/polo-5.jpg" class="img-fluid" alt="">
+            </div>
+            <div>
+              <a href="#" class="product_name_title">Polo T-Shirt Royale Blue</a>
+              <h6 class="product_price_rank">&#2547; 320.00 - &#2547; 490.00</h6>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+
+      <!-- All Polo collection Btn  -->
+      <div class="d-flex flex-column align-items-center gap-3 mt-5 ">
+        <div>
+          <a href="#" target="_blank" class="btn btn-outline-dark rounded-0 fw-bold  common-btn">ALL POLO COLLECTION>></a>
+        </div>
+        <div>
+          <h3 class="fw-bold mb-0">VISIT OUR EXCLUSIVE SHOP</h3>
+        </div>
+        <div>
+          <a href="#" target="_blank" class="btn btn-outline-dark rounded-0 fw-bold common-btn"><i class="fa-solid fa-location-dot"></i> Go Location</a>
+        </div>
+      </div>
+    </section>
+
+        <!-- ====== FOOTER SECTION =====  -->
+
+<footer class="bg-dark">
+  <div class="container py-5">
+    <div class="footer-wrapper d-md-flex flex-md-row justify-content-md-between">
+      <div class="footer-contact mb-5 mb-md-0">
+        <h5 class="footer-title text-white fs-6">CONTACT US</h5>
+        
+          <ul class="list-group list-group-flush bg-dark">
+            <li class="list-group-item border-0 bg-transparent text-white ps-1">
+              <a href="#" target="_blank" class="text-white">
+                <i class="fa-solid fa-location-dot"></i>
+                <span> Uttarkhan, Uttara, Dhaka 1230</span>
+              </a>  
+            </li>
+            
+            <li class="list-group-item border-0 bg-transparent ps-1">
+              <a href="tel:+8809613-827080" target="_blank" class="text-white">
+                <i class="fa-solid fa-phone"></i>
+                <span> +8809613-827080</span>
+              </a>
+            </li>
+
+            <li class="list-group-item border-0 bg-transparent ps-1">
+              <a href="mailto:oneummahbd@gmail.com" target="_blank" class="text-white">
+                <i class="fa-solid fa-envelope"></i>
+                <span>oneummahbd@gmail.com</span>
+              </a>  
+            </li>
+          </ul>
+       
+      </div>
+
+      <div class="footer-company mb-5 mb-md-0">
+        <h5 class="footer-title text-white fs-6">COMPANY</h5>
+
+        <ul class="list-group list-group-flush bg-dark">
+          <li class="list-group-item bg-transparent border-0 ps-1">
+            <a href="#" class="text-white">Who we are</a>
+          </li>
+
+          <li class="list-group-item bg-transparent border-0 ps-1">
+            <a href="#" class="text-white">Our Stores</a>
+          </li>
+
+          <li class="list-group-item bg-transparent border-0 ps-1">
+            <a href="#" class="text-white">Become an Affiliate</a>
+          </li>
+
+          <li class="list-group-item bg-transparent border-0 ps-1">
+            <a href="#" class="text-white">Invest Money</a>
+          </li>
+
+          <li class="list-group-item bg-transparent border-0 ps-1">
+            <a href="#" class="text-white">Sell Your Design</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer-legal mb-5 mb-md-0">
+        <h5 class="footer-title text-white fs-6">LEGAL</h5>
+        <ul class="list-group list-group-flush bg-dark">
+          <li class="list-group-item bg-transparent border-0 ps-1">
+            <a href="#" class="text-white">Terms & Conditions</a>
+          </li>
+
+          <li class="list-group-item bg-transparent border-0 ps-1">
+            <a href="#" class="text-white">Privacy Policy</a>
+          </li>
+
+          <li class="list-group-item bg-transparent border-0 ps-1">
+            <a href="#" class="text-white">Return Policy</a>
+          </li>
+
+          <li class="list-group-item bg-transparent border-0 ps-1">
+            <a href="#" class="text-white">Security</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer-payment">
+        <h5 class="footer-title text-white fs-6">PAYMENT US</h5>
+        <ul class="list-group list-group-flush bg-dark">
+          <li class="list-group-item bg-transparent border-0 ps-1">
+           <img src="./img/footer-payment-us.png" alt="">
+          </li>
+        </ul>
+      </div>
+
+    </div>
+    <!-- Footer Copyright -->
+    <span class="text-light d-block text-center mt-5">Copyright &copy; 2022 oneummahbd.com</span>
+  </div>
+</footer>
+
+            <!-- All Modal Contents -->
+  <!-- Login Register Modal  -->
+  <div class="modal fade" id="login_reg_modal">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content rounded-0 pb-5 px-md-5 px-sm-3">
+        <div class="modal-header border-bottom-0">
+          <button class="btn-close" data-bs-dismiss="modal" type="button"></button>
+        </div>
+        <!-- Login Reg Modal Body  -->
+          <div class="container">
+            <div class="row row-cols-lg-2">
+              <div class="modal-body">
+                <h4 class="fw-normal">LOGIN</h4>
+
+                <form action="">
+                  <div>
+                    <label for="" class="form-label fw-bold" style="font-size: 14px">Username or Email Address*</label>
+                    <input type="text" class="form-control rounded-0" id="log_reg_input" placeholder="Email or Username"><br>
+                  </div>
+
+                  <div>
+                    <label for="" class="form-label fw-bold" style="font-size: 14px">Password*</label>
+                    <input type="password" class="form-control rounded-0" id="log_reg_input" placeholder="Password"><br>
+                  </div>
+
+                  <input type="checkbox">
+                  <label for="">Remember me</label><br><br>
+
+                  <button class="btn btn-dark fw-bold rounded-0">Login</button>
+                </form>
+              </div>
+              <div class="modal-body">
+                <h4 class="fw-normal">REGISTER</h4>
+
+                <form action="">
+                  <div>
+                    <label for="" class="form-label fw-bold" style="font-size: 14px">Email Address</label>
+                    <input type="email" class="form-control rounded-0" id="log_reg_input" placeholder="Enter Email"><br>
+                  </div>
+
+                  <div>
+                    <label for="" class="form-label fw-bold" style="font-size: 14px">Password</label>
+                    <input type="password" class="form-control rounded-0" id="log_reg_input" placeholder="Enter Password"><br>
+                  </div>
+                  <p class="" style="font-size: 12px;text-align:justify;">
+                    Your personal data will be used to support your experience throughout this website, to manage access to your account, and for other purposes described in our privacy policy.
+                  </p>
+                </form>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+            <!-- All Modal Contents  end -->
+
+    <!-- Bootstrap js -->
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <!-- Swipper -- JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <!-- jQuery file -->
+    <script src="./js/jquery.min.js"></script>
+    <!-- Main js -->
+    <script src="./js/main.js"></script>
+
+  </body>
+</html>
